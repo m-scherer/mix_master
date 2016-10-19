@@ -5,7 +5,7 @@ FactoryGirl.define do
   end
 
   sequence :name do |n|
-    "#{n} Artist"
+    "#{n} Name"
   end
 
   sequence :title, ["A","C","B"].cycle do |n|
@@ -17,12 +17,12 @@ FactoryGirl.define do
     artist
   end
 
-  factory :playlist, aliases:[:playlist_name] do
+  factory :playlist do
     name
   end
 
-  sequence :playlist_name do
-    "Playlist #{n}"
-  end
+  # sequence :name do |n|
+  #   "Playlist #{n}"
+  # end
 
 end
